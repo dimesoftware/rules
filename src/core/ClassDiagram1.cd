@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Dime.Scheduler.RuleEngine.BaseValidationRuleSet&lt;T&gt;" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseValidationRuleSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dime.Scheduler.RuleEngine.ValidationEngine&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ValidationEngine.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Dime.Scheduler.RuleEngine.ValidationResult" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAgAAAAAABAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>ValidationResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dime.Scheduler.RuleEngine.ValidationRule&lt;T&gt;" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAgAgAAAAAAAAAAAAAEAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>ValidationRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Dime.Scheduler.RuleEngine.IValidationEngine&lt;T&gt;" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IValidationEngine.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Dime.Scheduler.RuleEngine.ValidationResultType" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAEAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>ValidationResultType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dime.Rules", "core\Dime.Rules.csproj", "{CC60F713-FD69-4D75-B15F-03E8892EE922}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{84A4E83B-2DF0-497D-9AEC-7DCC5A5865A1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dime.RuleEngine.Tests", "test\Dime.RuleEngine.Tests.csproj", "{F14EE458-36C3-499A-9C90-22A5D9682087}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC60F713-FD69-4D75-B15F-03E8892EE922}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC60F713-FD69-4D75-B15F-03E8892EE922}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC60F713-FD69-4D75-B15F-03E8892EE922}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC60F713-FD69-4D75-B15F-03E8892EE922}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F14EE458-36C3-499A-9C90-22A5D9682087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F14EE458-36C3-499A-9C90-22A5D9682087}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F14EE458-36C3-499A-9C90-22A5D9682087}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F14EE458-36C3-499A-9C90-22A5D9682087}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F14EE458-36C3-499A-9C90-22A5D9682087} = {84A4E83B-2DF0-497D-9AEC-7DCC5A5865A1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D3462256-3F72-4E84-AC14-FD61543CB78C}
+	EndGlobalSection
+EndGlobal
