@@ -1,30 +1,44 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Dime.Validation
 {
-    public abstract class ValidationEngine<T> : IValidationEngine<T> where T : class
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    public class ValidationEngine<T> : IValidationEngine<T> where T : class
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="rules"></param>
+        public ValidationEngine(params ValidationRule<T>[] rules)
+        {
+            _rules = rules.ToList();
+        }
+
+        private readonly IEnumerable<ValidationRule<T>> _rules;
+
         /// <summary>
         /// Executes the rules.
         /// </summary>
         /// <param name="item">The item.</param>
-        /// <param name="rules">The rules.</param>
         /// <returns></returns>
-        public virtual ValidationResult ExecuteRules(T item, BaseValidationRuleSet<T> rules)
+        public virtual ValidationResult Validate(T item)
         {
-            ValidationResult validationResult = new ValidationResult() { IsValid = true };
+            ValidationResult validationResult = new ValidationResult { IsValid = true };
             List<string> messages = new List<string>();
-            foreach (ValidationRule<T> rule in rules.RuleList)
+            foreach (ValidationRule<T> rule in _rules
+                .Select(rule => new { rule, isValid = rule.ExecuteRule(item) })
+                .Where(t => !t.isValid)
+                .Select(t => t.rule))
             {
-                bool isValid = rule.ExecuteRule(item);
-                if (!isValid)
-                {
-                    validationResult.IsValid = false;
-                    validationResult.ResultType = ValidationResultType.ERROR;
-                    messages.Add(rule.Message);
+                validationResult.IsValid = false;
+                validationResult.ResultType = ValidationResultType.ERROR;
+                messages.Add(rule.Message);
 
-                    break;
-                }
+                break;
             }
 
             validationResult.Messages = messages;

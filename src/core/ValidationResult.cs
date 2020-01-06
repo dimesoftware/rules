@@ -2,6 +2,9 @@
 
 namespace Dime.Validation
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class ValidationResult
     {
         /// <summary>
