@@ -31,23 +31,24 @@ Use the package manager NuGet to install Dime.Rules:
 ## Usage
 
 ``` csharp
-    using Dime.Validation;
-    
-    public bool Validate(MyClass item)
-    {
-        var rule1 = new ValidationRule<MyClass>(x => x != null, "Item cannot be null");
-        var rule2 = new ValidationRule<MyClass>(x => x.MyBoolean == true, "MyBoolean needs to be true");
+using Dime.Rules;
 
-        ValidationEngine<MyClass> engine = new ValidationEngine<MyClass>(rule1, rule2);
-        ValidationResult validationResult = engine.Validate(item);
-        return validationResult.IsValid;
-    }
+public bool Validate(MyClass item)
+{
+    var rule1 = new ValidationRule<Customer>(x => x != null, "Item cannot be null");
+    var rule2 = new ValidationRule<Customer>(x => x.IsActive == true, "IsActive needs to be true");
+
+    ValidationEngine<Customer> engine = new ValidationEngine<Customer>(rule1, rule2);
+    ValidationResult validationResult = engine.Validate(item);
+    return validationResult.IsValid;
+}
 ```
 
 ## Contributing
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-Please make sure to update tests as appropriate.
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)
+
+Pull requests are welcome. Please check out the contribution and code of conduct guidelines.
 
 ## License
 
