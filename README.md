@@ -1,6 +1,6 @@
 # Dime.Rules
 
-[![Build Status](https://dev.azure.com/dimenicsbe/Utilities/_apis/build/status/Rules%20-%20MAIN%20-%20CI?branchName=master)](https://dev.azure.com/dimenicsbe/Utilities/_build/latest?definitionId=89&branchName=master)
+[![Build Status](https://dev.azure.com/dimenicsbe/Utilities/_apis/build/status/Rules%20-%20MAIN%20-%20CI?branchName=master)](https://dev.azure.com/dimenicsbe/Utilities/_build/latest?definitionId=89&branchName=master) ![Azure DevOps coverage](https://img.shields.io/azure-devops/coverage/dimenicsbe/Utilities/89?label=code%20coverage)
 
 ## Introduction
 
