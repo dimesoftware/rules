@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Dime.Validation
+namespace Dime.Rules
 {
     /// <summary>
     /// 
@@ -35,7 +35,6 @@ namespace Dime.Validation
                 .Select(t => t.rule))
             {
                 validationResult.IsValid = false;
-                validationResult.ResultType = ValidationResultType.ERROR;
                 messages.Add(rule.Message);
 
                 break;

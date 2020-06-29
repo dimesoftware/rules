@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
 
-namespace Dime.Validation
+namespace Dime.Rules
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public class ValidationResult
     {
         /// <summary>
-        /// Doesn't seem to hard to get right?
+        /// Indicates the status of the validation run
         /// </summary>
         public bool IsValid { get; set; }
 
@@ -16,10 +16,5 @@ namespace Dime.Validation
         /// Informative messages about the result of the rule evaluation
         /// </summary>
         public IEnumerable<string> Messages { get; set; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        public ValidationResultType ResultType { get; set; }
     }
 }

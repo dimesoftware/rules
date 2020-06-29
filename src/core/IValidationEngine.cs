@@ -1,13 +1,13 @@
-﻿namespace Dime.Validation
+﻿namespace Dime.Rules
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public interface IValidationEngine<T> where T : class
+    public interface IValidationEngine<in T> where T : class
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="item"></param>
         /// <returns></returns>

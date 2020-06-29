@@ -1,33 +1,51 @@
 ﻿using System.Linq;
-using Dime.Validation;
+using Dime.Rules;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Dime.RuleEngine.Tests
+namespace Dime.Rules.Tests
 {
     [TestClass]
     public class ValidationEngineTests
     {
         [TestMethod]
-        public void TestValidationEngine()
+        public void ValidationEngine_Validate_Null_ShouldFail()
         {
-            var rule1 = new ValidationRule<MyClass>(x => x != null, "Item cannot be null");
-            var rule2 = new ValidationRule<MyClass>(x => x.MyBoolean == true, "MyBoolean needs to be true");
+            ValidationRule<Customer> rule1 = new ValidationRule<Customer>(x => x != null, "Item cannot be null");
+            ValidationRule<Customer> rule2 = new ValidationRule<Customer>(x => x.IsActive, "IsActive needs to be true");
 
-            ValidationEngine<MyClass> engine = new ValidationEngine<MyClass>(rule1, rule2);
-            var run1Result = engine.Validate(null);
-            var run2Result = engine.Validate(new MyClass());
-            var run3Result = engine.Validate(new MyClass {MyBoolean = true});
+            ValidationEngine<Customer> engine = new ValidationEngine<Customer>(rule1, rule2);
+            ValidationResult runResult = engine.Validate(null);
 
-            Assert.IsTrue(!run1Result.IsValid);
-            Assert.IsTrue(run1Result.Messages.Count() == 1);
-            Assert.IsTrue(run1Result.Messages.ElementAt(0) == "Item cannot be null");
+            Assert.IsTrue(!runResult.IsValid);
+            Assert.IsTrue(runResult.Messages.Count() == 1);
+            Assert.IsTrue(runResult.Messages.ElementAt(0) == "Item cannot be null");
+        }
 
-            Assert.IsTrue(!run2Result.IsValid);
-            Assert.IsTrue(run2Result.Messages.Count() == 1);
-            Assert.IsTrue(run2Result.Messages.ElementAt(0) == "MyBoolean needs to be true");
+        [TestMethod]
+        public void ValidationEngine_Validate_Inactive_ShouldFail()
+        {
+            ValidationRule<Customer> rule1 = new ValidationRule<Customer>(x => x != null, "Item cannot be null");
+            ValidationRule<Customer> rule2 = new ValidationRule<Customer>(x => x.IsActive, "IsActive needs to be true");
 
-            Assert.IsTrue(run3Result.IsValid);
-            Assert.IsTrue(!run3Result.Messages.Any());
+            ValidationEngine<Customer> engine = new ValidationEngine<Customer>(rule1, rule2);
+            ValidationResult runResult = engine.Validate(new Customer());
+
+            Assert.IsTrue(!runResult.IsValid);
+            Assert.IsTrue(runResult.Messages.Count() == 1);
+            Assert.IsTrue(runResult.Messages.ElementAt(0) == "IsActive needs to be true");
+        }
+
+        [TestMethod]
+        public void ValidationEngine_ValidData_ShouldPass()
+        {
+            ValidationRule<Customer> rule1 = new ValidationRule<Customer>(x => x != null, "Item cannot be null");
+            ValidationRule<Customer> rule2 = new ValidationRule<Customer>(x => x.IsActive, "IsActive needs to be true");
+
+            ValidationEngine<Customer> engine = new ValidationEngine<Customer>(rule1, rule2);
+            ValidationResult runResult = engine.Validate(new Customer { IsActive = true });
+
+            Assert.IsTrue(runResult.IsValid);
+            Assert.IsTrue(!runResult.Messages.Any());
         }
     }
 }

@@ -1,17 +1,15 @@
 ﻿using System;
 
-namespace Dime.Validation
+namespace Dime.Rules
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class ValidationRule<T> where T : class
     {
-        #region Constructor
-
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="rule"></param>
         /// <param name="message"></param>
@@ -21,19 +19,9 @@ namespace Dime.Validation
             Message = message;
         }
 
-        #endregion Constructor
-
-        #region Properties
-
         public string Message { get; set; }
         internal Func<T, bool> Rule { get; set; }
 
-        #endregion Properties
-
-        #region Methods
-
         public bool ExecuteRule(T objectToValidate) => Rule(objectToValidate);
-
-        #endregion Methods
     }
 }

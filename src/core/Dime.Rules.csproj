@@ -6,15 +6,15 @@
     <SccLocalPath>SAK</SccLocalPath>
     <PackageProjectUrl>http://www.dimenics.com</PackageProjectUrl>
     <PackageReleaseNotes></PackageReleaseNotes>
-    <PackageTags></PackageTags>
+    <PackageTags>Rules</PackageTags>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyTitle>Dime.RuleEngine</AssemblyTitle>
-    <VersionPrefix>1.0.1</VersionPrefix>
+    <AssemblyTitle>Dime.Rules</AssemblyTitle>
+    <VersionPrefix>1.0.3</VersionPrefix>
     <Authors>Dimenics</Authors>
-    <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
-    <AssemblyName>Dime.RuleEngine</AssemblyName>
-    <PackageId>Dime.RuleEngine</PackageId>
+    <TargetFrameworks>netstandard2.1;net461</TargetFrameworks>
+    <AssemblyName>Dime.Rules</AssemblyName>
+    <PackageId>Dime.Rules</PackageId>
     <PackageIconUrl>http://dimenuget.azurewebsites.net/Images/dimenuget.png</PackageIconUrl>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
@@ -23,8 +23,10 @@
     <IncludeSymbols>True</IncludeSymbols>
     <Description>Simple business rules framework</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <NeutralLanguage>en</NeutralLanguage>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/dimenics/dime-rules</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 </Project>
