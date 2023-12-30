@@ -5,7 +5,7 @@
 		<Authors>Dime Software</Authors>
 		<Company>Dime Software</Company>
 		<Product>Validation Rules</Product>
-		<Description>Route and travel time calculator</Description>
+		<Description>A simple validation rule engine</Description>
 		<PackageProjectUrl>https://github.com/dimesoftware/maps</PackageProjectUrl>
 		<PackageIconUrl>https://cdn.dime-software.com/dime-software/logo-shape.png</PackageIconUrl>
 		<Version>1.1.0</Version>
