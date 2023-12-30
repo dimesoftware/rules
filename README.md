@@ -1,10 +1,7 @@
-# Dime.Rules
+<div align="center"><img src="assets/logo.png?raw=true" width="350" alt="Logo"></div>
 
-[![Build Status](https://dev.azure.com/dimenicsbe/Utilities/_apis/build/status/Rules%20-%20MAIN%20-%20CI?branchName=master)](https://dev.azure.com/dimenicsbe/Utilities/_build/latest?definitionId=89&branchName=master) ![Azure DevOps coverage](https://img.shields.io/azure-devops/coverage/dimenicsbe/Utilities/89?label=code%20coverage)
 
-## Introduction
-
-Simple rule engine.
+<div align="center"><h1>Dime.Rules</h1></div>
 
 ## Getting Started
 

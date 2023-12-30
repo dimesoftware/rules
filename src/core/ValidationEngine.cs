@@ -3,16 +3,8 @@ using System.Linq;
 
 namespace Dime.Rules
 {
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <typeparam name="T"></typeparam>
     public class ValidationEngine<T> : IValidationEngine<T> where T : class
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="rules"></param>
         public ValidationEngine(params ValidationRule<T>[] rules)
         {
             _rules = rules.ToList();
@@ -20,11 +12,6 @@ namespace Dime.Rules
 
         private readonly IEnumerable<ValidationRule<T>> _rules;
 
-        /// <summary>
-        /// Executes the rules.
-        /// </summary>
-        /// <param name="item">The item.</param>
-        /// <returns></returns>
         public virtual ValidationResult Validate(T item)
         {
             ValidationResult validationResult = new ValidationResult { IsValid = true };

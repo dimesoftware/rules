@@ -1,32 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup Label="Globals">
-    <SccProjectName>SAK</SccProjectName>
-    <SccProvider>SAK</SccProvider>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccLocalPath>SAK</SccLocalPath>
-    <PackageProjectUrl>http://www.dimenics.com</PackageProjectUrl>
-    <PackageReleaseNotes></PackageReleaseNotes>
-    <PackageTags>Rules</PackageTags>
-  </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyTitle>Dime.Rules</AssemblyTitle>
-    <VersionPrefix>1.0.3</VersionPrefix>
-    <Authors>Dimenics</Authors>
-    <TargetFrameworks>netstandard2.1;net461</TargetFrameworks>
-    <AssemblyName>Dime.Rules</AssemblyName>
-    <PackageId>Dime.Rules</PackageId>
-    <PackageIconUrl>http://dimenuget.azurewebsites.net/Images/dimenuget.png</PackageIconUrl>
-    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
-    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
-    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-    <IncludeSource>True</IncludeSource>
-    <IncludeSymbols>True</IncludeSymbols>
-    <Description>Simple business rules framework</Description>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.3</Version>
-    <NeutralLanguage>en</NeutralLanguage>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <RepositoryUrl>https://github.com/dimenics/dime-rules</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-  </PropertyGroup>
+
+	<PropertyGroup>
+		<TargetFrameworks>net8.0</TargetFrameworks>
+		<Authors>Dime Software</Authors>
+		<Company>Dime Software</Company>
+		<Product>Validation Rules</Product>
+		<Description>Route and travel time calculator</Description>
+		<PackageProjectUrl>https://github.com/dimesoftware/maps</PackageProjectUrl>
+		<PackageIconUrl>https://cdn.dime-software.com/dime-software/logo-shape.png</PackageIconUrl>
+		<Version>1.1.0</Version>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<IncludeSymbols>true</IncludeSymbols>
+		<NeutralLanguage>en</NeutralLanguage>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/dimesoftware/rules</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Include="README.md" Pack="true" PackagePath="\"/>
+	</ItemGroup>
 </Project>
