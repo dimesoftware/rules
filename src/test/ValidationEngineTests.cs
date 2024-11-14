@@ -10,10 +10,10 @@ namespace Dime.Rules.Tests
         [TestMethod]
         public void ValidationEngine_Validate_Null_ShouldFail()
         {
-            ValidationRule<Customer> rule1 = new ValidationRule<Customer>(x => x != null, "Item cannot be null");
-            ValidationRule<Customer> rule2 = new ValidationRule<Customer>(x => x.IsActive, "IsActive needs to be true");
+            ValidationRule<Customer> rule1 = new(x => x != null, "Item cannot be null");
+            ValidationRule<Customer> rule2 = new(x => x.IsActive, "IsActive needs to be true");
 
-            ValidationEngine<Customer> engine = new ValidationEngine<Customer>(rule1, rule2);
+            ValidationEngine<Customer> engine = new(rule1, rule2);
             ValidationResult runResult = engine.Validate(null);
 
             Assert.IsTrue(!runResult.IsValid);
@@ -24,10 +24,10 @@ namespace Dime.Rules.Tests
         [TestMethod]
         public void ValidationEngine_Validate_Inactive_ShouldFail()
         {
-            ValidationRule<Customer> rule1 = new ValidationRule<Customer>(x => x != null, "Item cannot be null");
-            ValidationRule<Customer> rule2 = new ValidationRule<Customer>(x => x.IsActive, "IsActive needs to be true");
+            ValidationRule<Customer> rule1 = new(x => x != null, "Item cannot be null");
+            ValidationRule<Customer> rule2 = new(x => x.IsActive, "IsActive needs to be true");
 
-            ValidationEngine<Customer> engine = new ValidationEngine<Customer>(rule1, rule2);
+            ValidationEngine<Customer> engine = new(rule1, rule2);
             ValidationResult runResult = engine.Validate(new Customer());
 
             Assert.IsTrue(!runResult.IsValid);
@@ -38,10 +38,10 @@ namespace Dime.Rules.Tests
         [TestMethod]
         public void ValidationEngine_ValidData_ShouldPass()
         {
-            ValidationRule<Customer> rule1 = new ValidationRule<Customer>(x => x != null, "Item cannot be null");
-            ValidationRule<Customer> rule2 = new ValidationRule<Customer>(x => x.IsActive, "IsActive needs to be true");
+            ValidationRule<Customer> rule1 = new(x => x != null, "Item cannot be null");
+            ValidationRule<Customer> rule2 = new(x => x.IsActive, "IsActive needs to be true");
 
-            ValidationEngine<Customer> engine = new ValidationEngine<Customer>(rule1, rule2);
+            ValidationEngine<Customer> engine = new(rule1, rule2);
             ValidationResult runResult = engine.Validate(new Customer { IsActive = true });
 
             Assert.IsTrue(runResult.IsValid);

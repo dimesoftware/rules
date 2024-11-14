@@ -14,8 +14,8 @@ namespace Dime.Rules
 
         public virtual ValidationResult Validate(T item)
         {
-            ValidationResult validationResult = new ValidationResult { IsValid = true };
-            List<string> messages = new List<string>();
+            ValidationResult validationResult = new() { IsValid = true };
+            List<string> messages = [];
             foreach (ValidationRule<T> rule in _rules
                 .Select(rule => new { rule, isValid = rule.ExecuteRule(item) })
                 .Where(t => !t.isValid)
